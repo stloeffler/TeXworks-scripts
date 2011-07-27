@@ -11,7 +11,7 @@ default file browser.
 Prerequisites
 =============
 
-- TeXworks (http://www.tug.org/texworks/)
+- [TeXworks](http://www.tug.org/texworks/)
 
 
 
