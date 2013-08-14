@@ -21,4 +21,4 @@ if (typeof(str) == "string" && str != "") {
 		TW.result = retVal["message"];
 	}
 }
-
+undefined;
