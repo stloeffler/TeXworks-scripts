@@ -10,14 +10,14 @@ str = TW.getText(TW.target, "TeXdoc documentation", "Please specify which docume
 
 if (typeof(str) == "string" && str != "") {
 	retVal = TW.system("texdoc " + str);
-	if (retVal["status"] != 2) {
-		// Not SystemAccess_PermissionDenied
+	if (retVal["status"] == 0) {
+		// SystemAccess_OK
 		if (retVal["output"] != "") {
 			TW.information(TW.target, "TeXdoc output", retVal["output"]);
 		}
 	}
 	else {
-		// Show "system command disabled" message
+		// Show info message (which hopefully gives a hint what went wrong)
 		TW.result = retVal["message"];
 	}
 }
