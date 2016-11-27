@@ -33,5 +33,6 @@ Usage
 =====
 
 Click on the "Scripts > TeXdoc" menu item and enter the search term (e.g.,
-package name) in the popup dialog.
+package name) in the popup dialog. Alternatively, you can select a package name
+in your source file and then run the script.
 

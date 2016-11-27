@@ -2,11 +2,16 @@
 // Title: TeXdoc
 // Description: Allows you to access the TeX documentation through the texdoc program
 // Author: Stefan Löffler
-// Version: 0.0.1
-// Date: 2013-02-25
+// Version: 0.0.2
+// Date: 2016-11-27
 // Script-Type: standalone
 
-str = TW.getText(TW.target, "TeXdoc documentation", "Please specify which documentation you are looking for:");
+var str = "";
+if (TW.target.selection)
+	str = TW.target.selection;
+
+if (str == undefined || str == "")
+	str = TW.getText(TW.target, "TeXdoc documentation", "Please specify which documentation you are looking for:");
 
 if (typeof(str) == "string" && str != "") {
 	retVal = TW.system("texdoc " + str);
