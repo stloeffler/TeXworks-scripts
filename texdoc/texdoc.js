@@ -14,7 +14,7 @@ if (str == undefined || str == "")
 	str = TW.getText(TW.target, "TeXdoc documentation", "Please specify which documentation you are looking for:");
 
 if (typeof(str) == "string" && str != "") {
-	retVal = TW.system("texdoc " + str);
+	retVal = TW.system("texdoc -I " + str);
 	if (retVal["status"] == 0) {
 		// SystemAccess_OK
 		if (retVal["output"] != "") {
